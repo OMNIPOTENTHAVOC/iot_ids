@@ -5,47 +5,6 @@
 
 ---
 
-## Quick Flowchart
-
-            ┌────────────┐
-            │ Python IDS │
-            └─────┬──────┘
-                  │
-   (Feature Extraction & ML)
-                  │
-                  ▼
-            ┌───────────────┐
-            │ C++ Log Server│
-            └─────┬─────────┘
-                  │
-      (Verify mTLS, parse)
-                  │
-                  ▼
-            ┌───────────────┐
-            │ Log Store     │
-            │ (append-only) │
-            └─────┬─────────┘
-                  │
-                  ▼
-            ┌───────────────┐
-            │ Merkle Builder│
-            │ / Signer      │
-            └─────┬─────────┘
-                  │
-                  ▼
-            ┌───────────────┐
-            │ Anchor to     │
-            │ Blockchain    │
-            └─────┬─────────┘
-                  │
-                  ▼
-            ┌───────────────┐
-            │ Verifier /    │
-            │ Forensics     │
-            └───────────────┘
-
----
-
 ## Phase 0 — Prerequisites
 **What**
 - Hardware: development machine(s), Raspberry Pi (for gateway testing).  
