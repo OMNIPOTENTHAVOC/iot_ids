@@ -19,10 +19,6 @@ v
 [Anchor to Blockchain]
 |
 [Verifier / Forensics]
-
-markdown
-Copy code
-
 ---
 
 ## Phase 0 — Prerequisites
