@@ -5,20 +5,44 @@
 
 ---
 
-## Quick Text Flowchart
-[Python IDS] --(mTLS over TCP)--> [C++ Log Server]
-| |
-(feature extraction, ML) (verify mTLS, parse)
-| |
-(alert JSON over secure socket) |
-v
-[Log Store (append-only)]
-|
-[Merkle Builder / Signer]
-|
-[Anchor to Blockchain]
-|
-[Verifier / Forensics]
+## Quick Flowchart
+
+            ┌────────────┐
+            │ Python IDS │
+            └─────┬──────┘
+                  │
+   (Feature Extraction & ML)
+                  │
+                  ▼
+            ┌───────────────┐
+            │ C++ Log Server│
+            └─────┬─────────┘
+                  │
+      (Verify mTLS, parse)
+                  │
+                  ▼
+            ┌───────────────┐
+            │ Log Store     │
+            │ (append-only) │
+            └─────┬─────────┘
+                  │
+                  ▼
+            ┌───────────────┐
+            │ Merkle Builder│
+            │ / Signer      │
+            └─────┬─────────┘
+                  │
+                  ▼
+            ┌───────────────┐
+            │ Anchor to     │
+            │ Blockchain    │
+            └─────┬─────────┘
+                  │
+                  ▼
+            ┌───────────────┐
+            │ Verifier /    │
+            │ Forensics     │
+            └───────────────┘
 ---
 
 ## Phase 0 — Prerequisites
