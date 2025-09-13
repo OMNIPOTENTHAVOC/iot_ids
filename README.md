@@ -43,6 +43,7 @@
             │ Verifier /    │
             │ Forensics     │
             └───────────────┘
+
 ---
 
 ## Phase 0 — Prerequisites
