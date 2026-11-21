@@ -63,7 +63,7 @@ int main() {
         while (true) {
             // Create a socket and pass ownership to the thread
             // Note: In newer Boost versions, we move the socket.
-            // If this line fails, revert to your previous connection logic.
+            // If this line fails, revert to previous connection logic.
             ssl::stream<tcp::socket> ssl_sock(io_context, ctx);
             acceptor.accept(ssl_sock.next_layer());
 
